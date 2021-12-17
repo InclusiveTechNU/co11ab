@@ -1,0 +1,66 @@
+{
+    "name": "Collaborative Writing",
+    "version": "0.8.0",
+    "description": "Accessible collaborative writing on Google Docs",
+    "manifest_version": 2,
+    "permissions": [
+        "tts",
+        "downloads"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_popup": "settings.html"
+    },
+    "content_scripts": [{
+        "matches": ["*://*.docs.google.com/document/d/*"],
+        "js": [
+            "tone.js",
+            "diff.js",
+            "utilities.js",
+            "setup.js",
+            "relative_proximity.js",
+            "audio_scrollbar.js",
+            "real_time_activity.js"
+        ]
+    },
+    {
+        "matches": ["*://*.docs.google.com/document/d/*"],
+        "js": ["canvas.js"],
+        "run_at": "document_start",
+        "all_frames": true
+      }],
+    "commands": {
+        "execute-follow-mode": {
+            "suggested_key": {
+            "default": "Ctrl+Shift+H",
+            "mac": "MacCtrl+Shift+F"
+            },
+            "description": "Toggle Follow Mode"
+        },
+        "execute-what-mode": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+L",
+                "mac": "MacCtrl+Shift+W"
+            },
+            "description": "Toggle What Mode"
+        },
+        "execute-cursor-mode": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+K",
+                "mac": "MacCtrl+Shift+C"
+            },
+            "description": "Toggle Cursor Mode"
+        },
+        "execute-audio-scrollbar-mode": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+U",
+                "mac": "MacCtrl+Shift+A"
+            },
+            "description": "Toggle Audio Scrollbar Mode"
+        }
+    }
+  }

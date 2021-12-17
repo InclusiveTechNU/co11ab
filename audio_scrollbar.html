@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Collab Settings</title>
+        <meta name="description" content="Settings for the collaborative writing Google Docs extension">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="settings.css">
+    </head>
+
+    <body>
+        <a href="settings.html">Back</a>
+        <h1>Audio Scrollbar Settings</h1>
+        <br>
+        <fieldset>
+            <legend>Presentation Options</legend>
+            <br>
+            <input type="radio" id="as_segment_zero" name="as_segment">
+            <label for="as_segment_zero">Off</label><br>
+    
+            <input type="radio" id="as_segment_one" name="as_segment">
+            <label for="as_segment_one">Paragraph Scrollbar</label><br>
+    
+            <input type="radio" id="as_segment_two" name="as_segment">
+            <label for="as_segment_two">Line Scrollbar</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Scroll Bar Options</legend>
+            <br>
+            <input type="checkbox" id="as_comments" name="as_options">
+            <label for="as_comments">Comments</label><br>
+            <input type="checkbox" id="as_cursors" name="as_options">
+            <label for="as_cursors">Cursors</label><br>
+            <input type="checkbox" id="as_edits" name="as_options">
+            <label for="as_edits">Edits</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Scroll Bar Sound Options</legend>
+            <br>
+            <input type="radio" id="as_sound_pitch" name="as_sound">
+            <label for="as_sound_pitch">Pitch</label><br>
+    
+            <input type="radio" id="as_sound_repeated" name="as_sound">
+            <label for="as_sound_repeated">Repeated Tone</label><br>
+        </fieldset>
+
+        <script src="audio_scrollbar_settings.js"></script>
+        <script src="settings.js"></script>
+    </body>
+</html>
